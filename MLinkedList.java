@@ -64,6 +64,11 @@ public class MLinkedList {
         size++;
     }
 
+    public void append(MLinkedList list){
+        this.last.setNext(list.first);
+        this.last = list.last;
+    }
+
     public ListNode remove(String search) {
         ListNode current = first;
         ListNode temp = null;
